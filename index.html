@@ -25,7 +25,18 @@
     <div class="container p-5">
         <div class="row">
             <div class="col-sm-6">
+
+                <h1 class="bg-warning text-dark w-100" id="print2"></h1>
                 <h1 class="bg-warning text-dark w-100" id="print"></h1>
+                <label for="inp2" class="bg-dark text-light">Enter Your Name :</label>
+                <input class="form-control bg-light text-dark" type="text" name="" id="inp2"
+                    placeholder="Enter Your Name">
+
+                <br><br>
+
+
+
+                <label for="inp" class="bg-dark text-light">Enter Your Year of Birth :</label>
                 <input class="form-control bg-light text-dark" type="text" name="" id="inp"
                     placeholder="Plz Enter Your Year of birth">
                 <br>
@@ -41,10 +52,11 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <h2 class="bg-dark text-center text-success sorry">Sorry ...😟😫😫</h2>
+                <h2 class="bg-dark text-center text-success sorry">Life ...😟😫😫</h2>
             </div>
         </div>
     </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
@@ -57,10 +69,29 @@
         function age() {
             let x = document.getElementById("print")
             let y = document.getElementById("inp").value
+            let a = document.getElementById("inp2").value
             let z = 2023 - y
             console.log(z);
 
             let age = document.getElementById("print").innerHTML = (z)
+
+
+
+            setTimeout(removeAge, 2000)
+            alert()
+        }
+
+        function removeAge() {
+            let age = document.getElementById("print").innerHTML = ""
+            let warn = document.getElementById("print2").innerHTML = ""
+
+
+        }
+
+        function alert() {
+            let age = document.getElementById("print2").innerHTML = `
+            <div class="alert alert-success">Congratulation Your are younger</div>
+            `
 
         }
 
